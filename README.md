@@ -1,6 +1,6 @@
 # All-In-One Automatic Clicker
 
-An automatic clicker for the (Hamster ~ TapSwap ~ Cex IO) bots.
+An automatic clicker for the (Hamster ~ TapSwap ~ Cex IO) bots. :)
 
 ## Prerequisites
 
