@@ -265,13 +265,13 @@ Just a powerful clicker and non-stop bread 🚀
 
 
 
-Coded By: @uPaSKaL | GitHub: [Poryaei](https://github.com/Poryaei)
+Coded By: @ItsFuckingTrap (https://t.me/ItsFuckingTrap) | GitHub: [Poryaei](https://github.com/salehpx)
 
                           """)
         
     
     elif text == '/version':
-        await _sendMessage(f"ℹ️ Version: {VERSION}\n\nCoded By: @uPaSKaL | GitHub: [Poryaei](https://github.com/Poryaei)")
+        await _sendMessage(f"ℹ️ Version: {VERSION}\n\nCoded By: @ItsFuckingTrap (https://t.me/ItsFuckingTrap) | GitHub: [Pxeditor](https://github.com/salehpx)")
     
     elif text == '/stop':
         await _sendMessage('👋')
