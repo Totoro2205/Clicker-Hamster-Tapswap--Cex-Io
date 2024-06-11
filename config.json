@@ -1,0 +1,14 @@
+{
+    "api_id":    27526999,
+    "api_hash": "aade764740acda175e82ad70a59c110c",
+    "admin": 6057539036,
+    "tapswap_clicker": "on",
+    "hamster_clicker": "on",
+    "cexio_clicker": "on",
+    "auto_upgrade": true,
+    "max_days_for_return": 30,
+    "max_charge_level": 5,
+    "max_energy_level": 10,
+    "max_tap_level": 10,
+    "cexio_ref_code": "1716310450941700"
+}
