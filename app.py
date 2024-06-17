@@ -238,7 +238,7 @@ async def answer(event):
 Just a powerful clicker and non-stop bread 🚀
 
 
-💻 Author: `Abolfazl Poryaei`
+💻 Author: `Saleh & Abolfazl`
 📊 Clicker stats: `{_clicker_stats}`
 ⏳ Uptime: `{_hours} hours and {_minutes} minutes`
 💡 Next Tap in: `{_hours2} hours and {_minutes2} minutes`
@@ -265,13 +265,13 @@ Just a powerful clicker and non-stop bread 🚀
 
 
 
-Coded By: @ItsFuckingTrap (https://t.me/ItsFuckingTrap) | GitHub: [Poryaei](https://github.com/salehpx)
+Coded By: @Pxeditor | GitHub: [Poryaei](https://github.com/Salehpx)
 
                           """)
         
     
     elif text == '/version':
-        await _sendMessage(f"ℹ️ Version: {VERSION}\n\nCoded By: @ItsFuckingTrap (https://t.me/ItsFuckingTrap) | GitHub: [Pxeditor](https://github.com/salehpx)")
+        await _sendMessage(f"ℹ️ Version: {VERSION}\n\nCoded By: @ItsFuckingTrap | GitHub: [Poryaei](https://github.com/salehpx)")
     
     elif text == '/stop':
         await _sendMessage('👋')
