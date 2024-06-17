@@ -1,4 +1,4 @@
-# All-In-One Automatic Clicker
+# Clicker
 
 An automatic clicker for the (Hamster ~ TapSwap ~ Cex IO) bots.
 
