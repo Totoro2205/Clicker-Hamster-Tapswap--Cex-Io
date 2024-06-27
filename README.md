@@ -1,154 +1,153 @@
+
 # All-In-One Automatic Clicker
 
-An automatic clicker for the (Hamster ~ TapSwap ~ CexIO ~ Blum) bots.
+یک کلیکر خودکار برای بات‌های (Hamster ~ TapSwap ~ CexIO ~ Blum).
 
-## Bot Status
+## وضعیت بات‌ها
 
 <div align="center">
 
 | **Bot**  | **Status**  |
 |:--------:|:-----------:|
-| **Blum** | ✔️ Active   |
-| **Hamster** | ✔️ Active   |
-| **CexIO** | ✔️ Active   |
-| **TapSwap** | ❌ Inactive |
+| **Blum** | ✔️ فعال      |
+| **Hamster** | ✔️ فعال   |
+| **CexIO** | ✔️ فعال     |
+| **TapSwap** | ❌ غیرفعال |
 
 </div>
 
-## Prerequisites
+## پیش‌نیازها
 
-- Python 3.10 or higher
+- Python 3.10 یا بالاتر
 
-## Installation
+## نصب
 
-Follow these steps to install and set up the automatic clicker on Telegram:
+مراحل زیر را برای نصب و راه‌اندازی کلیکر خودکار در تلگرام دنبال کنید:
 
-1. **Clone the Repository**
+1. **کلون کردن مخزن**
    ```sh
    git clone https://github.com/salehpx/Clicker
    cd Clicker
    ```
 
-2. **Create and Activate a Virtual Environment**
+2. **ایجاد و فعال‌سازی محیط مجازی**
    ```sh
    python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   source venv/bin/activate  # در ویندوز: `venv\Scripts\activate`
    ```
 
-3. **Install Dependencies**
+3. **نصب وابستگی‌ها**
    ```sh
    pip install -r requirements.txt
    ```
 
-## Setup
+## تنظیمات
 
-1. **Configure Telegram Accounts**
-   - Ensure you have the phone numbers for each account that will be used to operate the clicker.
+1. **پیکربندی حساب‌های تلگرام**
+   - اطمینان حاصل کنید که شماره تلفن‌های هر حسابی که قرار است از کلیکر استفاده کنند را دارید.
 
-2. **Edit the Configuration File**
-   - Open the `config.json` file and edit the necessary parameters.
-   - Example `config.json`:
+2. **ویرایش فایل پیکربندی**
+   - فایل `config.json` را باز کرده و پارامترهای لازم را ویرایش کنید.
+   - نمونه `config.json`:
      ```json
-   {
-    "api_id":    26766605,
-    "api_hash": "9d27802c38413c38b1aa12149ee50bff",
-    "admin": 6057539036,
-    "bot_token": "",
-    "tapswap_clicker": "off",
-    "hamster_clicker": "on",
-    "cexio_clicker": "on",
-    "blum_clicker": "on",
-    "auto_upgrade": true,
-    "max_days_for_return": 5,
-    "max_charge_level": 5,
-    "max_energy_level": 10,
-    "max_tap_level": 10,
-    "cexio_ref_code": "1717768426029179",
-    "blum_ref_code": "Aa83Rh"
-}
-
+     {
+        "api_id": 26766605,
+        "api_hash": "9d27802c38413c38b1aa12149ee50bff",
+        "admin": 6057539036,
+        "bot_token": "",
+        "tapswap_clicker": "off",
+        "hamster_clicker": "on",
+        "cexio_clicker": "on",
+        "blum_clicker": "on",
+        "auto_upgrade": true,
+        "max_days_for_return": 5,
+        "max_charge_level": 5,
+        "max_energy_level": 10,
+        "max_tap_level": 10,
+        "cexio_ref_code": "1717768426029179",
+        "blum_ref_code": "Aa83Rh"
+     }
      ```
-   - **Note:** 
-     - Replace the value of `admin` with the numeric ID of the admin. You can get this ID by contacting [@chatIDrobot](https://t.me/chatIDrobot) on Telegram.
-     - If you set any of the clickers (`tapswap_clicker`, `hamster_clicker`, `cexio_clicker`, `blum_clicker`) to "off", the bot will not interact with that specific bot.
-     - The `max_days_for_return` setting is for the Hamster bot. It specifies the maximum number of days it should take for a card to return its profit.
-     - The `max_charge_level`, `max_energy_level`, and `max_tap_level` settings are for the TapSwap bot.
-     - Replace `cexio_ref_code` and `blum_ref_code` with your own referral codes.
+   - **توجه:**
+     - مقدار `admin` را با شناسه عددی ادمین جایگزین کنید. می‌توانید این شناسه را با تماس با [@chatIDrobot](https://t.me/chatIDrobot) در تلگرام دریافت کنید.
+     - اگر هر یک از کلیکرها (`tapswap_clicker`, `hamster_clicker`, `cexio_clicker`, `blum_clicker`) را روی "off" تنظیم کنید، بات با آن بات خاص تعامل نخواهد داشت.
+     - تنظیم `max_days_for_return` برای بات Hamster است و حداکثر تعداد روزهایی را مشخص می‌کند که باید طول بکشد تا یک کارت به سوددهی برسد.
+     - تنظیمات `max_charge_level`, `max_energy_level`, و `max_tap_level` برای بات TapSwap هستند.
+     - کدهای ارجاع `cexio_ref_code` و `blum_ref_code` را با کدهای خودتان جایگزین کنید.
 
-### Important: Bot Token Configuration for Multi-Account
+### نکته مهم: پیکربندی توکن بات برای مدیریت چند حساب
 
-To manage multiple accounts, you need to set up a bot token obtained from BotFather. Follow these steps:
+برای مدیریت چندین حساب، نیاز به تنظیم یک توکن بات که از BotFather دریافت می‌کنید دارید. مراحل زیر را دنبال کنید:
 
-1. **Create a Telegram Bot via BotFather**
-   - Open Telegram and search for [@BotFather](https://t.me/BotFather).
-   - Start a chat with BotFather and use the `/newbot` command to create a new bot.
-   - Follow the instructions to set a name and username for your bot.
-   - Once created, you will receive a bot token. **Copy this token.**
+1. **ایجاد یک بات تلگرام از طریق BotFather**
+   - تلگرام را باز کنید و [@BotFather](https://t.me/BotFather) را جستجو کنید.
+   - یک چت با BotFather شروع کنید و از دستور `/newbot` برای ایجاد یک بات جدید استفاده کنید.
+   - دستورالعمل‌ها را برای تنظیم نام و نام کاربری بات دنبال کنید.
+   - پس از ایجاد، یک توکن بات دریافت خواهید کرد. **این توکن را کپی کنید.**
 
-2. **Insert the Bot Token into `config.json`**
-   - Open your `config.json` file.
-   - Paste the copied bot token into the `"bot_token"` field.
-   - Example:
+2. **وارد کردن توکن بات در `config.json`**
+   - فایل `config.json` را باز کنید.
+   - توکن بات کپی شده را در فیلد `"bot_token"` جایگذاری کنید.
+   - مثال:
      ```json
-   {
-    "api_id":    26766605,
-    "api_hash": "9d27802c38413c38b1aa12149ee50bff",
-    "admin": 6057539036,
-    "bot_token": "",
-    "tapswap_clicker": "off",
-    "hamster_clicker": "on",
-    "cexio_clicker": "on",
-    "blum_clicker": "on",
-    "auto_upgrade": true,
-    "max_days_for_return": 5,
-    "max_charge_level": 5,
-    "max_energy_level": 10,
-    "max_tap_level": 10,
-    "cexio_ref_code": "1717768426029179",
-    "blum_ref_code": "Aa83Rh"
-   }
-
+     {
+        "api_id": 26766605,
+        "api_hash": "9d27802c38413c38b1aa12149ee50bff",
+        "admin": 6057539036,
+        "bot_token": "YOUR_BOT_TOKEN_HERE",
+        "tapswap_clicker": "off",
+        "hamster_clicker": "on",
+        "cexio_clicker": "on",
+        "blum_clicker": "on",
+        "auto_upgrade": true,
+        "max_days_for_return": 5,
+        "max_charge_level": 5,
+        "max_energy_level": 10,
+        "max_tap_level": 10,
+        "cexio_ref_code": "1717768426029179",
+        "blum_ref_code": "Aa83Rh"
+     }
      ```
-   - **Note:** The bot token is only required for multi-account management. Ensure it is correctly inserted to avoid any issues.
+   - **توجه:** توکن بات فقط برای مدیریت چند حساب مورد نیاز است. اطمینان حاصل کنید که به درستی وارد شده است تا از بروز مشکلات جلوگیری شود.
 
-## Running the Script
+## اجرای اسکریپت
 
-1. **Run the Multi-Account Script**
+1. **اجرای اسکریپت چند حساب**
    ```sh
    python multi-account.py
    ```
 
-2. **Send /help Command**
-   - After successfully running the script, send the command `/help` to the bot.
+2. **ارسال دستور /help**
+   - پس از اجرای موفقیت‌آمیز اسکریپت، دستور `/help` را به بات ارسال کنید.
 
-3. **Monitor the Logs**
-   - Check the logs to ensure the bot is running correctly and interacting with the specified bots (Hamster, TapSwap, Cex IO).
+3. **نظارت بر لاگ‌ها**
+   - لاگ‌ها را بررسی کنید تا اطمینان حاصل کنید که بات به درستی اجرا شده و با بات‌های مشخص شده (Hamster, TapSwap, Cex IO) تعامل دارد.
 
-## Usage
+## استفاده
 
-- The bot will automatically perform the clicking actions on the specified Telegram bots.
-- Ensure your environment and setup are correct to avoid any disruptions.
+- بات به طور خودکار اقدامات کلیک کردن را روی بات‌های تلگرام مشخص شده انجام خواهد داد.
+- اطمینان حاصل کنید که محیط و تنظیمات شما صحیح هستند تا از هرگونه وقفه جلوگیری شود.
 
-## Troubleshooting
+## رفع اشکال
 
-- Ensure Python version 3.10 or higher is installed.
-- Verify all dependencies are correctly installed.
-- Double-check your phone numbers and ensure they are entered correctly.
-- Verify the `config.json` file is correctly configured.
+- اطمینان حاصل کنید که نسخه Python 3.10 یا بالاتر نصب شده است.
+- بررسی کنید که همه وابستگی‌ها به درستی نصب شده‌اند.
+- شماره تلفن‌های خود را دوباره بررسی کنید و مطمئن شوید که به درستی وارد شده‌اند.
+- فایل `config.json` را دوباره بررسی کنید و مطمئن شوید که به درستی پیکربندی شده است.
 
-## Contact
+## تماس
 
-For further assistance, please reach out to the project maintainer.
-
----
-
-This guide provides a comprehensive setup and usage manual for the All-In-One Automatic Clicker. Make sure to follow each step carefully to ensure the tool functions correctly.
+برای دریافت کمک بیشتر، لطفاً با نگهدارنده پروژه تماس بگیرید.
 
 ---
 
-## Configuration Update
+این راهنما یک تنظیم و استفاده کامل از All-In-One Automatic Clicker را فراهم می‌کند. اطمینان حاصل کنید که هر مرحله را با دقت دنبال کنید تا ابزار به درستی کار کند.
 
-The configuration file has been updated as follows:
+---
+
+## به‌روزرسانی پیکربندی
+
+فایل پیکربندی به شرح زیر به‌روز شده است:
 
 ```json
 {
@@ -170,6 +169,6 @@ The configuration file has been updated as follows:
 }
 ```
 
-### Important Note
+### نکته مهم
 
-The `app.py` part of the project is no longer available.
+قسمت `app.py` پروژه دیگر موجود نیست.
