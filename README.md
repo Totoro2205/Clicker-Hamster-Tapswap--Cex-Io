@@ -141,33 +141,10 @@
 
 ---
 
-این راهنما یک تنظیم و استفاده کامل از All-In-One Automatic Clicker را فراهم می‌کند. اطمینان حاصل کنید که هر مرحله را با دقت دنبال کنید تا ابزار به درستی کار کند.
+این راهنما یک تنظیم و استفاده کامل از  Clicker را فراهم می‌کند. اطمینان حاصل کنید که هر مرحله را با دقت دنبال کنید تا ابزار به درستی کار کند.
 
 ---
 
-## به‌روزرسانی پیکربندی
-
-فایل پیکربندی به شرح زیر به‌روز شده است:
-
-```json
-{
-    "api_id": 8086441,
-    "api_hash": "2a305482a93b5a762d2acd4be90dd00f",
-    "admin": 6135970338,
-    "bot_token": "",
-    "tapswap_clicker": "off",
-    "hamster_clicker": "on",
-    "cexio_clicker": "on",
-    "blum_clicker": "on",
-    "auto_upgrade": true,
-    "max_days_for_return": 5,
-    "max_charge_level": 5,
-    "max_energy_level": 10,
-    "max_tap_level": 10,
-    "cexio_ref_code": "1716310450941700",
-    "blum_ref_code": "AacKuW83Rh"
-}
-```
 
 ### نکته مهم
 
