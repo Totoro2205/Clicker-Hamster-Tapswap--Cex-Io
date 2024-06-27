@@ -1,5 +1,4 @@
 
-# All-In-One Automatic Clicker
 
 یک کلیکر خودکار برای بات‌های (Hamster ~ TapSwap ~ CexIO ~ Blum).
 
