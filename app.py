@@ -238,7 +238,7 @@ async def answer(event):
 Just a powerful clicker and non-stop bread 🚀
 
 
-💻 Author: `Saleh & Abolfazl`
+💻 Author: `Abolfazl Poryaei`
 📊 Clicker stats: `{_clicker_stats}`
 ⏳ Uptime: `{_hours} hours and {_minutes} minutes`
 💡 Next Tap in: `{_hours2} hours and {_minutes2} minutes`
@@ -265,13 +265,13 @@ Just a powerful clicker and non-stop bread 🚀
 
 
 
-Coded By: @Pxeditor | GitHub: [Poryaei](https://github.com/Salehpx)
+Coded By: @uPaSKaL | GitHub: [Poryaei](https://github.com/Poryaei)
 
                           """)
         
     
     elif text == '/version':
-        await _sendMessage(f"ℹ️ Version: {VERSION}\n\nCoded By: @ItsFuckingTrap | GitHub: [Poryaei](https://github.com/salehpx)")
+        await _sendMessage(f"ℹ️ Version: {VERSION}\n\nCoded By: @uPaSKaL | GitHub: [Poryaei](https://github.com/Poryaei)")
     
     elif text == '/stop':
         await _sendMessage('👋')
@@ -319,7 +319,7 @@ tapswap_url = cache_db.get('tapswap_url')
 hamster_url = cache_db.get('hamster_url')
 cex_io_url  = cache_db.get('cex_io_url')
 
-tapswap_client = TapSwap(tapswap_url, auto_upgrade, max_charge_level, max_energy_level, max_tap_level)
+tapswap_client = TapSwap(tapswap_url, auto_upgrade, max_charge_level, max_energy_level, max_tap_level, client_id)
 hamster_client = HamsterCombat(hamster_url, max_days_for_return)
 cex_io_client  = Cex_IO(cex_io_url, client_id)    
 

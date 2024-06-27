@@ -6,7 +6,7 @@ from scripts.hamster    import HamsterCombat
 from scripts.cexio      import Cex_IO
 from scripts.logger     import setup_custom_logger
 from scripts.cache_data import SimpleCache
-from scripts.tg_client  import create_client
+from scripts.tg_client  import create_client, reload_sessions
 
 from telethon.sync import TelegramClient
 from telethon import functions, types, events, Button, errors
@@ -38,6 +38,7 @@ with open('config.json') as f:
     hamster_clicker  = data['hamster_clicker']
         
     cexio_ref_code   = data['cexio_ref_code']
+    blum_ref_code    = data['blum_ref_code']
     
 
 if not os.path.exists('sessions'):
@@ -47,20 +48,30 @@ if not os.path.exists('sessions'):
 m = """
 Welcome to the Multi Session version of the All in One Clicker script! 🎉
 
-GitHub Repository: https://github.com/Poryaei/All-In-One
+GitHub Repository: https://github.com/salehpx/Clicker
 
 Please choose:
 
 1. Add account (session / clicker)
 2. Run the bots
+3. Reload Sessions ( For New Bots )
 """
 
 print(m)
 
-while input("Press 1 to add account (session / clicker), or any other key to start bots: ") == "1":
-    create_client(api_id, api_hash, admin, cexio_ref_code)
+while True:
+    choice = input("Please enter your choice: ")
+    
+    if choice == "1":
+        create_client(api_id, api_hash, admin, cexio_ref_code)
+    elif choice == "2":
+        break
+    elif choice == "3":
+        reload_sessions()
+    else:
+        print("Invalid choice. Please try again.")
+    
     print(m)
-
     
 if not os.path.exists('sessions'):
     os.mkdir('sessions')
@@ -165,6 +176,7 @@ def total_balance():
     tapswap = 0
     hamster = 0
     cexio   = 0
+    blum    = 0
     hamster_earn_per_hour = 0
     data = ""
     
@@ -191,8 +203,14 @@ def total_balance():
             data += f"User: `{client_id}` | ❣️Cex IO: `{convert_big_number(float(cache_db.get('cex_io_balance')))}`\n\n"
         except:
             pass
-    
-    return tapswap, hamster, cexio, hamster_earn_per_hour, data
+        
+        try:
+            blum += float(cache_db.get('blum_balance'))
+            data += f"User: `{client_id}` | ⚫️ Blum: `{convert_big_number(float(cache_db.get('blum_balance')))}`\n\n"
+        except:
+            pass
+        
+    return tapswap, hamster, cexio, hamster_earn_per_hour, blum
 
 def convert_uptime(uptime):
     hours   = int(uptime // 3600)
@@ -281,13 +299,14 @@ async def answer(event):
         
     elif text == '/balance':
         m = await event.reply('Calculating the inventory. It might take some time ⏳.')
-        tapswap, hamster, cexio, hamster_earn_per_hour, data = total_balance()
+        tapswap, hamster, cexio, hamster_earn_per_hour, blum = total_balance()
         await m.edit(f"""Total number of clickers: `{len(url_files)}`
 Total inventories:
 
 🤖 Total TapSwap: `{convert_big_number(tapswap)}`
 🐹 Total Hamster: `{convert_big_number(hamster)}`
 🔗 Total CEX IO:  `{convert_big_number(cexio)}`
+⚫️ Total Blum:  `{convert_big_number(blum)}`
 
 🐹 Total Hamster Earn Per Hour:  `{convert_big_number(hamster_earn_per_hour)}`
 🐹 Total Hamster Earn Per Day:   `{convert_big_number(hamster_earn_per_hour*24)}`
@@ -310,7 +329,7 @@ Total inventories:
 Just a powerful clicker and non-stop bread 🚀
 
 
-💻 Author: `Abolfazl Poryaei`
+💻 Author: `Abolfazl & Saleh`
 📊 Clicker stats: `{_clicker_stats}`
 ⏳ Uptime: `{_hours} hours and {_minutes} minutes`
 🎛 CPU usage: `{cpu_percent:.2f}%`
@@ -336,12 +355,12 @@ Just a powerful clicker and non-stop bread 🚀
 
 
 
-Coded By: @uPaSKaL | GitHub: [Poryaei](https://github.com/Poryaei)
+Coded By: @Pxeditor | GitHub: [Pxeditor](https://github.com/salehpx/Clicker)
 
                           """)
 
     elif text == '/version':
-        await event.reply(f"ℹ️ Version: {VERSION}\n\nCoded By: @uPaSKaL | GitHub: [Poryaei](https://github.com/Poryaei)")
+        await event.reply(f"ℹ️ Version: {VERSION}\n\nCoded By: @Pxeditor | GitHub: [Pxeditor](https://github.com/salehpx/Clicker)")
     
     elif text == '/stop':
         await event.reply('👋')
